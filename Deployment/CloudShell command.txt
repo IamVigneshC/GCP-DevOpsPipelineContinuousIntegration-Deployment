@@ -1,0 +1,102 @@
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-00-338e399b82a4.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+student_00_b362f7dd8362@cloudshell:~ (qwiklabs-gcp-00-338e399b82a4)$ mkdir gcp-course
+student_00_b362f7dd8362@cloudshell:~ (qwiklabs-gcp-00-338e399b82a4)$ cd gcp-course
+student_00_b362f7dd8362@cloudshell:~/gcp-course (qwiklabs-gcp-00-338e399b82a4)$ git clone https://GitHub.com/GoogleCloudPlatform/training-data-analyst.git
+Cloning into 'training-data-analyst'...
+remote: Enumerating objects: 81, done.
+remote: Counting objects: 100% (81/81), done.
+remote: Compressing objects: 100% (72/72), done.
+remote: Total 39537 (delta 37), reused 26 (delta 9), pack-reused 39456
+Receiving objects: 100% (39537/39537), 451.62 MiB | 29.05 MiB/s, done.
+Resolving deltas: 100% (24582/24582), done.
+Checking out files: 100% (7945/7945), done.
+student_00_b362f7dd8362@cloudshell:~/gcp-course (qwiklabs-gcp-00-338e399b82a4)$ cd training-data-analyst/courses/design-process/deploying-apps-to-gcp
+student_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$ sudo pip3 install -r requirements.txt
+
+Collecting Flask==1.1.1 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+    100% |████████████████████████████████| 102kB 3.8MB/s
+Requirement already satisfied: itsdangerous>=0.24 in /usr/local/lib/python3.7/dist-packages (from Flask==1.1.1->-r requirements.txt (line 1)) (1.1.0)
+Requirement already satisfied: Jinja2>=2.10.1 in /usr/local/lib/python3.7/dist-packages (from Flask==1.1.1->-r requirements.txt (line 1)) (2.11.2)
+Requirement already satisfied: MarkupSafe>=0.23 in /usr/local/lib/python3.7/dist-packages (from Jinja2>=2.10.1->Flask==1.1.1->-r requirements.txt (line 1)) (1.1.1)
+Installing collected packages: Flask
+  Found existing installation: Flask 1.1.2
+    Uninstalling Flask-1.1.2:
+      Successfully uninstalled Flask-1.1.2
+Successfully installed Flask-1.1.1
+student_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$ python3 main.py
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 280-797-930
+127.0.0.1 - - [14/Aug/2020 10:30:45] "GET /?authuser=1 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Aug/2020 10:30:46] "GET /favicon.ico HTTP/1.1" 404 -
+^Cstudent_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$ gcloud app create --region=us-central
+You are creating an app for project [qwiklabs-gcp-00-338e399b82a4].
+WARNING: Creating an App Engine application for a project is irreversible and the region
+cannot be changed. More information about regions is at
+<https://cloud.google.com/appengine/docs/locations>.
+
+Creating App Engine application in project [qwiklabs-gcp-00-338e399b82a4] and region [us-central]....done.
+Success! The app is now created. Please use `gcloud app deploy` to deploy your first app.
+student_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$ gcloud app deploy --version=one --quiet
+Services to deploy:
+
+descriptor:      [/home/student_00_b362f7dd8362/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp/app.yaml]
+source:          [/home/student_00_b362f7dd8362/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp]
+target project:  [qwiklabs-gcp-00-338e399b82a4]
+target service:  [default]
+target version:  [one]
+target url:      [https://qwiklabs-gcp-00-338e399b82a4.uc.r.appspot.com]
+
+
+Beginning deployment of service [default]...
+Created .gcloudignore file. See `gcloud topic gcloudignore` for details.
+╔════════════════════════════════════════════════════════════╗
+╠═ Uploading 7 files to Google Cloud Storage                ═╣
+╠═ Uploading 7 files to Google Cloud Storage                ═╣
+╚════════════════════════════════════════════════════════════╝
+File upload done.
+Updating service [default]...done.
+Setting traffic split for service [default]...done.
+Deployed service [default] to [https://qwiklabs-gcp-00-338e399b82a4.uc.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+student_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-33student_00_b362f7dd8362@cloudshell:~/gcstudent_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$ gcloud app deploy --version=two --no-promote --quiet
+Services to deploy:
+
+descriptor:      [/home/student_00_b362f7dd8362/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp/app.yaml]
+source:          [/home/student_00_b362f7dd8362/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp]
+target project:  [qwiklabs-gcp-00-338e399b82a4]
+target service:  [default]
+target version:  [two]
+target url:      [https://two-dot-qwiklabs-gcp-00-338e399b82a4.uc.r.appspot.com]
+
+
+     (add --promote if you also want to make this service available from
+     [https://qwiklabs-gcp-00-338e399b82a4.uc.r.appspot.com])
+
+Beginning deployment of service [default]...
+╔════════════════════════════════════════════════════════════╗
+╠═ Uploading 1 file to Google Cloud Storage                 ═╣
+╚════════════════════════════════════════════════════════════╝
+File upload done.
+Updating service [default]...done.
+Deployed service [default] to [https://two-dot-qwiklabs-gcp-00-338e399b82a4.uc.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse
+student_00_b362f7dd8362@cloudshell:~/gcp-course/training-data-analyst/courses/design-process/deploying-apps-to-gcp (qwiklabs-gcp-00-338e399b82a4)$

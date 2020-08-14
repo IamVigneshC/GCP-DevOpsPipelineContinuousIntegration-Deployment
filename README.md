@@ -21,6 +21,7 @@ Build a continuous integration pipeline using Cloud Source Repositories, Cloud B
 
 Deploy applications to the Google Cloud services App Engine, Kubernetes Engine, and Cloud Run.
 
+![Image of Deploy](https://github.com/IamVigneshC/GCP-DevOpsPipelineContinuousIntegration-Deployment/blob/master/templates/2.png)
 
 •	Deploy to App Engine
 

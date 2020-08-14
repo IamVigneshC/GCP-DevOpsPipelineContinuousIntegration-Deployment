@@ -3,7 +3,7 @@
 Build a continuous integration pipeline using Cloud Source Repositories, Cloud Build, build triggers, and Container Registry.
 
 
-![Image of 3-service-animated](https://github.com/IamVigneshC/3TierAWSMicroService/blob/master/container-demo/images/3-service-animated.gif)
+![Image of DevOps](https://github.com/IamVigneshC/DevOpsPipelineCI/blob/master/templates/1.jpg)
 
 
 ‣ Create a simple Python Flask web application

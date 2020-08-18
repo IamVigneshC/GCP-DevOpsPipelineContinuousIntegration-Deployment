@@ -1,1 +1,5 @@
-Cloud Run simplifies and automates deployments to Kubernetes. When you use Cloud Run, you don't need a configuration file. You simply choose a cluster for your application. With Cloud Run, you can use a cluster managed by Google, or you can use your own Kubernetes cluster. To use Cloud Run, your application needs to be deployed using a Docker image and it must be stateless.
+Cloud Run simplifies and automates deployments to Kubernetes. 
+When you use Cloud Run, you don't need a configuration file. 
+You simply choose a cluster for your application. 
+With Cloud Run, you can use a cluster managed by Google, or you can use your own Kubernetes cluster. 
+To use Cloud Run, your application needs to be deployed using a Docker image and it must be stateless.
